@@ -1160,8 +1160,7 @@ length:
 
         u->buffer.pos += line.len + 2;
 
-        if (u->buffer.pos + NGX_HTTP_ENHANCED_MEMCACHED_EXTRACT_HEADERS <= u->buffer.last
-          && ngx_strncmp(u->buffer.pos, ngx_http_enhanced_memcached_extract_headers, NGX_HTTP_ENHANCED_MEMCACHED_EXTRACT_HEADERS) == 0) {
+        if (u->buffer.pos + NGX_HTTP_ENHANCED_MEMCACHED_EXTRACT_HEADERS <= u->buffer.last) {
 
           ngx_table_elt_t                *h;
           ngx_int_t                       rc;
